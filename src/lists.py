@@ -32,4 +32,4 @@ print(len(x))
 
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
-print([ n*100 for n in x ])
+print([n*100 for n in x])

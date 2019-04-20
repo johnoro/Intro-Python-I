@@ -30,7 +30,7 @@ def f2(*nums):
     for n in nums:
       sum += n
     return sum
-  except:
+  except ValueError:
     print('Your supplied arguments could not be summed.')
     return None
 

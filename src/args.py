@@ -12,6 +12,7 @@ def f1(addend1, addend2):
     print('Your supplied addends could not be summed.')
     return None
 
+
 print(f1(1, 2))
 
 # Write a function f2 that takes any number of integer arguments and prints the
@@ -33,6 +34,7 @@ def f2(*nums):
     print('Your supplied arguments could not be summed.')
     return None
 
+
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
 print(f2(1, 4, -12))            # Should print -7
@@ -51,6 +53,7 @@ print(f2(*a))    # Should print 22
 def f3(addend1, addend2 = 1):
   return f1(addend1, addend2)
 
+
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
 
@@ -67,6 +70,7 @@ print(f3(8))     # Should print 9
 def f4(**keywordArgs):
   for k, v in keywordArgs.items():
     print(f'key: {k}, value: {v}')
+
 
 # Should print
 # key: a, value: 12

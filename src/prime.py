@@ -5,7 +5,6 @@
 #       Erathosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes), one
 #       of the oldest algorithms known (ca. 200 BC).
 
-
 def getNum():
   # Read a number from the keyboard
   num = input("\nEnter a number: ")
@@ -14,15 +13,20 @@ def getNum():
 
 try:
   num = getNum()
+  def printPrime(): print(f'{num} is prime.')
+  def printNotPrime(): print(f'{num} is not prime.')
+
   if num > 1:
-    for i in range(2, num):
+    for i in range(2, num//2):
       if num % i == 0:
-        print(f'{num} is not prime.')
+        printNotPrime()
         print(f'{i} times {num//i} is {num}')
         break
     else:
-      print(f'{num} is prime.')
+      printPrime()
   else:
-    print(f'{num} is not prime.')
-except:
+    printNotPrime()
+except ValueError:
   print('It seems that you did not enter a number.')
+
+print()

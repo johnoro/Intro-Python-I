@@ -23,11 +23,9 @@ def f2(*nums):
   numLen = len(nums)
   if numLen == 0:
     return 0
-  if numLen == 1:
-    return nums[0]
   try:
-    sum = 0
-    for n in nums:
+    sum = nums[0]
+    for n in nums[1:]:
       sum += n
     return sum
   except ValueError:

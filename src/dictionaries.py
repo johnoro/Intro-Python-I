@@ -16,29 +16,36 @@ has the following keys:
 """
 
 waypoints = [
-    {
-        "lat": 43,
-        "lon": -121,
-        "name": "a place"
-    }, 
-    {
-        "lat": 41,
-        "lon": -123,
-        "name": "another place"
-    }, 
-    {
-        "lat": 43,
-        "lon": -122,
-        "name": "a third place"
-    }
+  {
+    "lat": 43,
+    "lon": -121,
+    "name": "a place"
+  }, 
+  {
+    "lat": 41,
+    "lon": -123,
+    "name": "another place"
+  }, 
+  {
+    "lat": 43,
+    "lon": -122,
+    "name": "a third place"
+  }
 ]
 
 # Add a new waypoint to the list
 # YOUR CODE HERE
+waypoints.append(dict(lat=30, lon=-100, name='yet another place'))
 
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
 # YOUR CODE HERE
+found = next(wp for wp in waypoints if wp['name'] == 'a place')
+if found is not None:
+  found['lon'] = -130
+  found['name'] = 'not a real place'
 
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+for wp in waypoints:
+  print(wp)

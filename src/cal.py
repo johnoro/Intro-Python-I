@@ -34,6 +34,8 @@ try:
   print(createCalendar(*dates))
   print('=====================\n')
 except:
-  print('Your supplied argument(s) could not be parsed as integers.\n')
-  print('This should be used as:\n', './cal.py 4 2019\n', '4 being the month, 1-12, and 2019 being the year; negative values are B.C.\n')
+  print('\nYour supplied argument(s) could not be parsed as integers.')
+  print('This should be used as:') 
+  print('cal.py 4 2019')
+  print('4 being the month, 1-12, and 2019 being the year; negative values are B.C.\n')
 

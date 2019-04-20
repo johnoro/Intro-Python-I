@@ -17,5 +17,5 @@ try:
   # YOUR CODE HERE
   print('Even' if is_even(num) else 'Odd')
 except:
-  print('That is odd, but not quite odd in terms of numbers.\n'
-        + 'It seems that you did not enter a number.')
+  print('That is odd, but not quite odd in terms of numbers.')
+  print('It seems that you did not enter a number.')

@@ -7,7 +7,7 @@ def is_even(num):
 
 def getNum():
   # Read a number from the keyboard
-  num = input("Enter a number: ")
+  num = input('Enter a number: ')
   return int(num)
 
 

@@ -79,11 +79,11 @@ f4(a=12, b=30)
 # key: city, value: Berkeley
 # key: population, value: 121240
 # key: founded, value: "March 23, 1868"
-f4(city="Berkeley", population=121240, founded="March 23, 1868")
+f4(city='Berkeley', population=121240, founded='March 23, 1868')
 
 d = {
-  "monster": "goblin",
-  "hp": 3
+  'monster': 'goblin',
+  'hp': 3
 }
 
 # What thing do you have to add to make this work?

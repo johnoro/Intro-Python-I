@@ -1,4 +1,4 @@
-"""
+'''
 The Python standard library's 'calendar' module allows you to 
 render a calendar to your terminal.
 https://docs.python.org/3.6/library/calendar.html
@@ -17,7 +17,7 @@ and does the following:
  - Otherwise, print a usage statement to the terminal indicating
    the format that your program expects arguments to be given.
    Then exit the program.
-"""
+'''
 
 import sys
 from calendar import TextCalendar

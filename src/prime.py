@@ -3,12 +3,9 @@ from math import sqrt, ceil, floor
 arePrimes = [0, 1]
 
 def primeList(end):
-  start = len(arePrimes)
-  for i in range(start, end+1):
+  for i in range(len(arePrimes), end+1):
     arePrimes.append(True)
-  start = floor(sqrt(start)) // 2 - 1
-  if start < 2: start = 2
-  for i in range(start, ceil(sqrt(end)) + 1):
+  for i in range(2, ceil(sqrt(end+1)) + 1):
     if arePrimes[i]:
       for j in range(i*i, end+1, i):
         arePrimes[j] = False
@@ -30,7 +27,7 @@ while True:
     if num > 1:
       if num >= len(arePrimes):
         primeList(num)
-
+      
       if arePrimes[num]:
         printPrime()
       else:

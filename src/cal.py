@@ -38,4 +38,3 @@ except:
   print('This should be used as:') 
   print('cal.py 4 2019')
   print('4 being the month, 1-12, and 2019 being the year; negative values are B.C.\n')
-

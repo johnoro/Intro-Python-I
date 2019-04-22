@@ -1,11 +1,14 @@
-from math import sqrt, ceil
+from math import sqrt, ceil, floor
 
 arePrimes = [0, 1]
 
 def primeList(end):
-  for i in range(len(arePrimes), end+1):
+  start = len(arePrimes)
+  for i in range(start, end+1):
     arePrimes.append(True)
-  for i in range(2, ceil(sqrt(end)) + 1):
+  start = floor(sqrt(start)) // 2 - 1
+  if start < 2: start = 2
+  for i in range(start, ceil(sqrt(end)) + 1):
     if arePrimes[i]:
       for j in range(i*i, end+1, i):
         arePrimes[j] = False

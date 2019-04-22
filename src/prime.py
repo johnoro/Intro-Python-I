@@ -4,6 +4,19 @@
 #    2. Implement [The Sieve of
 #       Erathosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes), one
 #       of the oldest algorithms known (ca. 200 BC).
+from math import sqrt, ceil
+
+arePrimes = [0, 1]
+
+def primeList(end):
+  start = len(arePrimes)
+  for i in range(start, end+1):
+    arePrimes.append(True)
+  for i in range(start, ceil(sqrt(end))):
+    if arePrimes[i]:
+      for j in range(i*i, end+1, i):
+        arePrimes[j] = False
+
 
 def getNum():
   # Read a number from the keyboard
@@ -17,13 +30,13 @@ try:
   def printNotPrime(): print(f'{num} is not prime.')
 
   if num > 1:
-    for i in range(2, num//2):
-      if num % i == 0:
-        printNotPrime()
-        print(f'{i} times {num//i} is {num}')
-        break
-    else:
+    if num >= len(arePrimes):
+      primeList(num)
+
+    if arePrimes[num]:
       printPrime()
+    else:
+      printNotPrime()
   else:
     printNotPrime()
 except ValueError:

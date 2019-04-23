@@ -1,4 +1,4 @@
-from math import sqrt, ceil, floor
+from math import sqrt, ceil
 
 arePrimes = [0, 1]
 

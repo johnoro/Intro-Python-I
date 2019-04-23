@@ -20,16 +20,16 @@ and does the following:
 '''
 
 import sys
-from calendar import TextCalendar
+from calendar import TextCalendar as TextCal
 from datetime import datetime
 
 today = datetime.now()
 
 def createCalendar(month = today.month, year = today.year):
-  return TextCalendar().formatmonth(year, month)
+  return TextCal().formatmonth(year, month)
 
 try:
-  dates = [ int(s) for s in sys.argv[1:] ]
+  dates = map(int, sys.argv[1:])
   print('\n=====================\n')
   print(createCalendar(*dates))
   print('=====================\n')

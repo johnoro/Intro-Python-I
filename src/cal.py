@@ -1,4 +1,4 @@
-"""
+'''
 The Python standard library's 'calendar' module allows you to 
 render a calendar to your terminal.
 https://docs.python.org/3.6/library/calendar.html
@@ -17,8 +17,24 @@ and does the following:
  - Otherwise, print a usage statement to the terminal indicating
    the format that your program expects arguments to be given.
    Then exit the program.
-"""
+'''
 
 import sys
-import calendar
+from calendar import TextCalendar as TextCal
 from datetime import datetime
+
+today = datetime.now()
+
+def createCalendar(month = today.month, year = today.year):
+  return TextCal().formatmonth(year, month)
+
+try:
+  dates = map(int, sys.argv[1:])
+  print('\n=====================\n')
+  print(createCalendar(*dates))
+  print('=====================\n')
+except:
+  print('\nYour supplied argument(s) could not be parsed as integers.')
+  print('This should be used as:') 
+  print('cal.py 4 2019')
+  print('4 being the month, 1-12, and 2019 being the year; negative values are B.C.\n')

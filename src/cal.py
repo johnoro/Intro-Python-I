@@ -20,21 +20,24 @@ and does the following:
 '''
 
 import sys
-from calendar import TextCalendar as TextCal
+from calendar import TextCalendar
 from datetime import datetime
 
+cal = TextCalendar()
 today = datetime.now()
 
 def createCalendar(month = today.month, year = today.year):
-  return TextCal().formatmonth(year, month)
+  return cal.formatmonth(year, month)
 
 try:
   dates = map(int, sys.argv[1:])
   print('\n=====================\n')
   print(createCalendar(*dates))
   print('=====================\n')
-except:
+except ValueError:
   print('\nYour supplied argument(s) could not be parsed as integers.')
   print('This should be used as:') 
   print('cal.py 4 2019')
   print('4 being the month, 1-12, and 2019 being the year; negative values are B.C.\n')
+except IndexError:
+  print("Your supplied month doesn't seem to be 1-12. Please don't use larger or smaller numbers.")

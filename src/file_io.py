@@ -19,6 +19,5 @@ with open('foo.txt') as foo:
 
 # YOUR CODE HERE
 with open('bar.txt', 'w') as bar:
-  bar.write('''No, sir. I do not bite my thumb at you, sir, but I bite my thumb, sir.
-Do you quarrel, sir?
-Quarrel, sir? No, sir.''')
+  with open('foo.txt') as foo:
+    bar.write(foo.read())

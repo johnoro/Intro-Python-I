@@ -31,8 +31,9 @@ def createCalendar(month = today.month, year = today.year):
 
 try:
   dates = map(int, sys.argv[1:])
+  calendar = createCalendar(*dates)
   print('\n=====================\n')
-  print(createCalendar(*dates))
+  print(calendar)
   print('=====================\n')
 except ValueError:
   print('\nYour supplied argument(s) could not be parsed as integers.')

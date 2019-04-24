@@ -20,8 +20,7 @@ print(f1(1, 2))
 
 # YOUR CODE HERE
 def f2(*nums):
-  numLen = len(nums)
-  if numLen == 0:
+  if len(nums) == 0:
     return 0
   try:
     sum = nums[0]
